@@ -1,4 +1,6 @@
 Rails.application.configure do
+  # TODO: Here we don't need to use this url for testing
+  config.action_mailer.default_url_options = { host: 'example.com' }
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
