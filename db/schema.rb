@@ -73,6 +73,8 @@ ActiveRecord::Schema.define(version: 20180227180824) do
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
+  add_foreign_key "following_relationships", "users", column: "followed_user_id"
+  add_foreign_key "following_relationships", "users", column: "follower_id"
   add_foreign_key "likes", "shouts"
   add_foreign_key "likes", "users"
   add_foreign_key "shouts", "users"
